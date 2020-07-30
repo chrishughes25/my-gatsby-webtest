@@ -5,6 +5,17 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+     {
+      resolve: `gatsby-source-joomla-articles`,
+      options: {
+        //URL of the Joomla project (Rest api to fetch the articles)
+        baseUrl: "locahost:8080",
+      rowLimits:{
+        //Limit:How many articles you want to fetch.
+        limit:20,
+        step:100,
+        //Step : How many articles you want to fetch at one fetch request.
+        }}}, 
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
